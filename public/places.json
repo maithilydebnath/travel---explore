@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Europe Tour",
+        "description": " Amsterdam, one of Europe's capitals, has many attractions for visitors. The city's most famous sight is the 17th-century canals of Amsterdam In Eurpoe tour you have option to travel so many European country at a time.",
+        "price": 12000,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/7/72/A_backpacking_travel_to_europe_R002-005.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Canada Tour",
+        "description": "There are 20 World Heritage Sites in Canada, including one of the oldest, Nahanni National Park, Northwest Territories (1978), and one of the newest, the Writing-on-Stone Provincial Park, Alberta (2019).",
+        "price": 8000,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Egypt Tour",
+        "description": " Major tourist destinations include the millennia-old monuments in the Nile Valley. Principal among them are the Pyramids and Great Sphinx at Giza, the Abu Simbel temples and the Karnak Temple Complex and Valley of the Kings near Luxor. ",
+        "price": 6000,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Mohammed-ali-basha-mosque.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Australia Tour",
+        "description": "Popular Australian destinations include the coastal cities of Sydney, Brisbane and Melbourne, as well as other high-profile destinations including regional Queensland, the Gold Coast and the Great Barrier Reef, the world's largest reef.",
+        "price": 8500,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/2/2b/WhitsundayIslandBeach.JPG"
+    },
+    {
+        "id": 5,
+        "name": "Brazil Tour",
+        "description": " Most popular destinations of Brazil are the Amazon Rainforest, beaches and dunes in the Northeast Region, the Pantanal in the Center-West Region, beaches at Rio de Janeiro and Santa Catarina,cultural and historic tourism in Minas Gerais.",
+        "price": 5000,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/9/97/Foz_de_Igua%C3%A7u_27_Panorama_Nov_2005.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Thailand Tour",
+        "description": "Thailand is not just famous for its tropical beaches. The country is also famed for its amazing rural locations that cater extremely well for tourists despite seemingly being in the middle of nowhere..",
+        "price": 7000,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Pattaya_in_daytime_June_2017.jpg"
+    }
+]
