@@ -11,7 +11,7 @@ const Places = () => {
     }, [])
     return (
         <div>
-             <h2 className=" mt-5">Tour Places Options</h2>
+             <h2 className=" mt-5 text-primary">Tour Places Options</h2>
             <div id="places" className="place-container container">
                 {
                     places.map(place => <Place
