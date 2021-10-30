@@ -1,18 +1,19 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import img from '../../images/tours_advanced-scheduling-768x497.png';
+import './Features.css'
 const Features = () => {
     return (
         <div className="container p-4">
 
         <h1 className="text-center pb-2 pt-3 text-primary">Manage your tour schedule in real time with Us</h1>
         <div className="d-flex  justify-content-around">
-            <div className="container p-4">
+            <div className="container ">
                 <div className="row row-1 ">
                     <div className="col-12 col-lg-6 col-md-12 m-0  ">
-                        <img className="FAQ-img" src={img} alt="" width="431 px" height="423 px"/>
+                        <img className="" src={img} alt="" />
                     </div>
-                    <div className="col-12 col-lg-6 mt-5">
+                    <div className="col-12 col-lg-6 mt-4">
                     <Accordion className="text-start mb-4 mt-2" defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header><b> 24/7 access for you and your guides</b></Accordion.Header>

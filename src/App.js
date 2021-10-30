@@ -11,6 +11,7 @@ import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Register from './components/Login/Register/Register';
+import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import WhyUs from './components/WhyUs/WhyUs';
@@ -29,9 +30,9 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            {/* <PrivateRoute path="/blogs">
-              <Blogs></Blogs>
-            </PrivateRoute> */}
+            <PrivateRoute path="/manageAllOrders">
+              <ManageAllOrders></ManageAllOrders>
+            </PrivateRoute>
             <PrivateRoute path="/addPlace">
               <AddPlace></AddPlace>
             </PrivateRoute>

@@ -3,6 +3,8 @@ import useAuth from '../../../hooks/useAuth';
 import { useForm } from 'react-hook-form';
 import './Booking.css'
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+import { Button, Modal } from 'react-bootstrap';
 
 const Booking = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -10,6 +12,10 @@ const Booking = () => {
     const {placeId}=useParams();
     const { user } = useAuth();
     const [place, setPlace] = useState([])
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
     
     useEffect(() => {
         fetch(`http://localhost:5000/places/${placeId}`)
@@ -21,10 +27,8 @@ const Booking = () => {
     const onSubmit = data => {
         // const savedCart = getStoredCart();
         // data.order = savedCart;
-        const savebooking = data.booking;
-
-     
-
+        // const savebooking = data.booking;
+        
         fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
@@ -41,7 +45,25 @@ const Booking = () => {
                     reset();
                 }
             })
-        }
+    }
+
+        // const handleDelete = id =>{
+        //   fetch(`http://localhost:5000/booking/${id}`,{
+        //     method: 'DELETE'
+        //   })
+        //   .then(res => res.json())
+        //   .then(data => {
+        //       console.log(data);
+        //       if (data.id) {
+        //         alert('Booking deleted successfully');
+        //         // clearTheCart();
+        //         reset();
+        //     }
+        
+        //   })
+        // }
+    
+
     return (
         <div>
             <h3 className="mt-4 mb-4 text-primary"> Booking Details : {place.name}</h3>
@@ -60,9 +82,32 @@ const Booking = () => {
                 <input placeholder="Address" defaultValue="" {...register("address")} />
                 <input placeholder="City" defaultValue="" {...register("city")} />
                 <input placeholder="phone number" defaultValue="" {...register("phone")} />
-
-                <input className="button mb-4" type="submit" />
+                                 
+                <input className="button" type="submit" />
+                
             </form>
+            <Button className="button mb-4 form-style"  onClick={handleShow}>
+            Do you want to Cancel your booking
+            </Button>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                <Modal.Title>Cancel Booking</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Are you sure!</Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Close
+                </Button>
+                <Link to={'/home'}>
+                <Button variant="primary" onClick={handleClose}>
+                    
+                    Cancel Booking
+                </Button>
+                </Link>
+                </Modal.Footer>
+            </Modal>
+           
         </div>
     );
 };
