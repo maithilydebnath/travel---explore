@@ -36,6 +36,7 @@ const MyOrders = () => {
     return (
         <div>
             <h2 className="text-primary m-2">My Order Lists</h2>
+            
             <ul className="container">
                 {
                     userBooking.map(user => <li className="border border-1 m-2"
@@ -45,12 +46,12 @@ const MyOrders = () => {
                     <p> Email:{user.email}</p> 
                     <p> Address:{user.address}, City:{user.city}, Phone:{user.phone}</p> 
                     
-                        {/* <Link to={`/users/update/${user._id}`}><button className="me-2  button">Update</button></Link> */}
                         <button className="button me-2" onClick={() => handleBookingUser(user._id)}>Booking</button>
                         <button className="button" onClick={() => handleDeleteUser(user._id)}>Delete</button>
                     </li>)
                 }
             </ul> 
+                    
         </div>
     );
 };
