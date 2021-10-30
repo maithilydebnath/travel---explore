@@ -15,7 +15,7 @@ const Places = () => {
             <div id="places" className="place-container container">
                 {
                     places.map(place => <Place
-                        key={place.id}
+                        key={place._id}
                         place={place}
                     ></Place>)
                 }

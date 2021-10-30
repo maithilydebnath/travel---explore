@@ -1,13 +1,25 @@
 .booking-form{
-    margin:30px 150px;
+    /* margin:30px 150px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
-.booking-form input {
-    display: block;
+.booking-form input, form-style {
+    /* display: block; */
+   
     margin-top: 30px;
     padding: 5px;
     border: 1px solid gray;
     border-radius: 5px;
     width: 300px;
+}
+
+.booking-form img{
+    width: 20%;
+    height: 20%;
 }
 .error{
     color: red;

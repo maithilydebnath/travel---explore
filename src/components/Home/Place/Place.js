@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Place.css'
 
 const Place = ({ place }) => {
-    const { name, description, img, id, price } = place;
+    const { name, description, img, _id, price } = place;
     return (
         <div className=" place">
         <img className="pt-4 " src={img} alt="" />
@@ -11,7 +11,7 @@ const Place = ({ place }) => {
 
         <p className="px-2">{description}</p>
         <h6>Price: $ {price}</h6>
-        <Link to={`/placeDetails/${id}`}>
+        <Link to={`/booking/${_id}`}>
             <button className="button m-3">Book Your Tour </button>
         </Link>
             
