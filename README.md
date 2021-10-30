@@ -1,6 +1,6 @@
 # Travel & Explore
 
-Please click on the link to check our website -
+Please click on the link to check our website and explore with us - https://travel-and-explore-5cbaa.web.app/
 
 ## Plan Your Trip with us
 

@@ -16,68 +16,68 @@ const useFirebase = () => {
     // const handleName = e => {
     //     setName(e.target.value);
     // }
-    const handleEmailChange = e => {
-        setEmail(e.target.value)
-    }
-    const handlePasswordChange = e => {
-        setPassword(e.target.value)
-    }
+    // const handleEmailChange = e => {
+    //     setEmail(e.target.value)
+    // }
+    // const handlePasswordChange = e => {
+    //     setPassword(e.target.value)
+    // }
 
-    const handleRegistration = e => {
-        e.preventDefault();
-        setIsLoading(true)
-        console.log(email, password);
-        if (password.length < 6) {
+    // const handleRegistration = e => {
+    //     e.preventDefault();
+    //     setIsLoading(true)
+    //     console.log(email, password);
+    //     if (password.length < 6) {
 
-            setError('Password should be at least 6 characters');
-            return;
-        }
-        if (!/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/.test(password)) {
-            setError('minimum 8 characters length, 2 letters in Upper Case, 1 Special Character,2 numerals (0-9) and 3 letters in Lower Case')
-            return;
-        }
+    //         setError('Password should be at least 6 characters');
+    //         return;
+    //     }
+    //     if (!/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/.test(password)) {
+    //         setError('minimum 8 characters length, 2 letters in Upper Case, 1 Special Character,2 numerals (0-9) and 3 letters in Lower Case')
+    //         return;
+    //     }
 
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                // Signed in 
-                const user = result.user;
-                console.log(user)
-                // setUser();
-                setUserName();
-                setError(' ');
-                setIsLoading(false);
-
-
-            })
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //         .then(result => {
+    //             // Signed in 
+    //             const user = result.user;
+    //             console.log(user)
+    //             // setUser();
+    //             setUserName();
+    //             setError(' ');
+    //             setIsLoading(false);
 
 
-            .catch((error) => {
+    //         })
 
-                setError(error.message);
 
-            });
+    //         .catch((error) => {
 
-    }
-    const handleLogin = e => {
-        setIsLoading(true)
-        e.preventDefault();
-        return signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                // Signed in 
-                const user = result.user;
-                console.log(user)
-                setUserName();
-                setError(' ');
+    //             setError(error.message);
 
-                setIsLoading(false);
+    //         });
 
-            })
-            .catch((error) => {
+    // }
+    // const handleLogin = e => {
+    //     setIsLoading(true)
+    //     e.preventDefault();
+    //     return signInWithEmailAndPassword(auth, email, password)
+    //         .then(result => {
+    //             // Signed in 
+    //             const user = result.user;
+    //             console.log(user)
+    //             setUserName();
+    //             setError(' ');
 
-                setError(error.message);
+    //             setIsLoading(false);
 
-            });
-    }
+    //         })
+    //         .catch((error) => {
+
+    //             setError(error.message);
+
+    //         });
+    // }
 
     const setUserName = () => {
         updateProfile(auth.currentUser, {
@@ -131,11 +131,11 @@ const useFirebase = () => {
         logOut,
         // createNewUser,
         // loginProcess,
-        handleRegistration,
-        handleEmailChange,
-        handlePasswordChange,
+        // handleRegistration,
+        // handleEmailChange,
+        // handlePasswordChange,
         error, setError,
-        handleLogin,
+        // handleLogin,
         setUserName
     }
 }

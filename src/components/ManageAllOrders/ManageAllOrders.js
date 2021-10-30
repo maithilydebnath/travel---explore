@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://vast-falls-32206.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setUsers(data));
     }, []);
@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/booking/${id}`;
+            const url = `https://vast-falls-32206.herokuapp.com/booking/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -35,6 +35,7 @@ const ManageAllOrders = () => {
                     users.map(user => <li className="container border border-1 m-2"
                         key={user._id}
                     ><h4 className="mt-2">Name:{user.name} </h4>
+                    <p>Purpose:{user.purpose} and Price: {user.price}</p>
                     <p> Email:{user.email}</p> 
                     <p> Address:{user.address}, City:{user.city}, Phone:{user.phone}</p> 
                     

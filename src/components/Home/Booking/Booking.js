@@ -18,7 +18,7 @@ const Booking = () => {
   const handleShow = () => setShow(true);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/places/${placeId}`)
+        fetch(`https://vast-falls-32206.herokuapp.com/places/${placeId}`)
             .then(res => res.json())
             .then(data => setPlace(data));
 
@@ -29,7 +29,7 @@ const Booking = () => {
         // data.order = savedCart;
         // const savebooking = data.booking;
         
-        fetch('http://localhost:5000/booking', {
+        fetch('https://vast-falls-32206.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -74,7 +74,8 @@ const Booking = () => {
                 <img src={place.img} alt="" srcset="" />
                 <p className="mt-2"><b>Purpose:{place.name}</b></p>
                 <p className="mt-2"><b>Price:$ {place.price}</b></p>
-                
+                <input defaultValue={place.name} {...register("purpose")} />
+                <input defaultValue={place.price} {...register("price")} />
                 <input defaultValue={user.displayName} {...register("name")} />
 
                 <input defaultValue={user.email} {...register("email", { required: true })} />

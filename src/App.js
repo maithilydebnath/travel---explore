@@ -1,4 +1,4 @@
-import { NotFound } from 'http-errors';
+
 import {
   BrowserRouter as Router, Switch,
   Route
@@ -16,6 +16,8 @@ import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import WhyUs from './components/WhyUs/WhyUs';
 import AuthProvider from './contexts/AuthProvider';
+import NotFound from './components/NotFound/NotFound';
+import MyOrders from './components/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
             </Route>
             <PrivateRoute path="/manageAllOrders">
               <ManageAllOrders></ManageAllOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+              <MyOrders></MyOrders>
             </PrivateRoute>
             <PrivateRoute path="/addPlace">
               <AddPlace></AddPlace>

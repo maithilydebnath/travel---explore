@@ -9,7 +9,7 @@ const AddPlace = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/places', data)
+        axios.post('https://vast-falls-32206.herokuapp.com/places', data)
             .then(res => {
                 console.log('post hitted')
                 if (res.data.insertedId) {
